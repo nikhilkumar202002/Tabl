@@ -2,6 +2,11 @@
 import React from 'react';
 import { PieChart, Pie, Cell,Tooltip,BarChart,Bar, XAxis, YAxis,ResponsiveContainer   } from 'recharts';
 import Header from '../Header/Header';
+import { AiOutlineProject } from "react-icons/ai";
+import { LuIndianRupee } from "react-icons/lu";
+import { FiUsers } from "react-icons/fi";
+import { BsGlobeCentralSouthAsia } from "react-icons/bs";
+
 
 import './Home.css';
 
@@ -73,10 +78,46 @@ const Home = () => {
             </div>
 
             <div className="stats-container">
-                <StatCard title="Projects" value="1,250+" />
-                <StatCard title="Total Budget" value="200 Cr" />
-                <StatCard title="Active Users" value="340+" />
-                <StatCard title="Countries/States" value="18" />
+                <div className="stat-card">
+                    <div className="stat-content">
+                        <h6>Projects</h6>
+                        <h1>1250+</h1>
+                    </div>
+                    <div className='stat-icon'>
+                        <AiOutlineProject/>
+                    </div>
+                </div>
+
+                <div className="stat-card">
+                    <div className="stat-content">
+                        <h6>Total Budget</h6>
+                        <h1>200 Cr</h1>
+                    </div>
+                    <div className='stat-icon'>
+                        <LuIndianRupee/>
+                    </div>
+                </div>
+
+                <div className="stat-card">
+                    <div className="stat-content">
+                        <h6>Active Users</h6>
+                        <h1>340+</h1>
+                    </div>
+                    <div className='stat-icon'>
+                        <FiUsers/>
+                    </div>
+                </div>
+
+                <div className="stat-card">
+                    <div className="stat-content">
+                        <h6>Countries/States</h6>
+                        <h1>18+</h1>
+                    </div>
+                    <div className='stat-icon'>
+                        <BsGlobeCentralSouthAsia/>
+                    </div>
+                </div>
+
             </div>
 
             <div className="content-row">
@@ -144,9 +185,18 @@ const Home = () => {
             </div>
 
             <div className="bottom-table">
+               
                 <div className="users-table">
-                            <h3>Users</h3>
-                            <table>
+                <div className="user-table-header">
+                    <div className="user-table-heading">
+                        <h3>Users</h3>
+                    </div>
+                    <div className="user-table-btn">
+                        <button>View All</button>
+                    </div>
+                </div>
+                <div className="table-user">
+                <table>
                                 <thead>
                                     <tr>
                                         <th>SL No.</th>
@@ -188,14 +238,25 @@ const Home = () => {
                                 </tbody>
                             </table>
                 </div>
+                          
+                </div>
                 <div className="view-all-section">
-                    <h3>View All</h3>
                         <div className="profile-card">
-                            <h4>John Abraham</h4>
-                            <p className="designation">CEO, Company</p>
-                            <p className="email">johnabraham@gmail.com</p>
-                            <p className="bio">Passionate professional with a focus on innovation, collaboration, and user-centered solutions.</p>
+                            <div className="profile-image">
+                                <img src="public/profile.jpg" alt="" />
+                            </div>
+                            <div className="profile-card-content">
+                                <h4>John Abraham</h4>
+                                <p className="designation">CEO, Company</p>
+                                <p className="email">johnabraham@gmail.com</p>
+                            </div>
+                           
+                          
                         </div>
+                                <div className="profile-desc">
+                                <p className="bio">Passionate professional with a focus on innovation, collaboration, and user-centered solutions.</p>
+                                    <button className='profile-desc-btn'>View Profile</button>
+                                </div>
                 </div>
             </div>
             
@@ -206,23 +267,6 @@ const Home = () => {
     );
 };
 
-// StatCard Component
-const StatCard = ({ title, value }) => (
-    <div className="stat-card">
-        <h4>{title}</h4>
-        <p>{value}</p>
-    </div>
-);
-
-// ProgressBar Component
-const ProgressBar = ({ percentage }) => (
-    <div className="progress-bar-container">
-        <div
-            className="progress-bar-fill"
-            style={{ width: `${percentage}%` }}
-        ></div>
-    </div>
-);
 
 // UserRow Component
 const UserRow = ({ slNo, name, email, designation, status }) => (

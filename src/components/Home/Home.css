@@ -6,14 +6,14 @@
   }
   
   .Home-header h1 {
-    font-size: 2rem;
-    color: #2c3e50;
+    font-size: 25px;
+    color: #1e1e1e;
     margin-bottom: 0.5rem;
   }
   
   .Home-header h2 {
-    font-size: 1.5rem;
-    color: #7f8c8d;
+    font-size: 18px;
+    color: #5f4b8b;
     margin-bottom: 2rem;
   }
   
@@ -25,12 +25,30 @@
   }
   
   .stat-card {
-    background: white;
+    background-color: rgba(255, 255, 255, 0.40); /* white at 50% opacity */
+    backdrop-filter: blur(30px); /* background blur effect */
+    -webkit-backdrop-filter: blur(30px); /* for Safari support */
     border-radius: 10px;
     padding: 1.5rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  
+  .stat-content{
+    border-left: 4px solid #5f4b8b;
+    padding-left: 20px;
+  }
+  .stat-icon{
+    font-size: 20px;
+    color: #645792;
+    background-color: #F1DEFF;
+    width: 38px;
+    height: 38px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .stat-card h4 {
     color: #7f8c8d;
     font-size: 1rem;
@@ -51,10 +69,11 @@
   }
   
   .sectors-container, .sdgs-container {
-    background: white;
+    background-color: rgba(255, 255, 255, 0.40); /* white at 50% opacity */
+    backdrop-filter: blur(30px); /* background blur effect */
+    -webkit-backdrop-filter: blur(30px); /* for Safari support */
     border-radius: 10px;
     padding: 1.5rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   }
   
   .sectors-container h3, .sdgs-container h3, .users-table h3, .view-all-section h3 {
@@ -86,7 +105,9 @@
   
   .progress-bar-container {
     height: 10px;
-    background-color: #ecf0f1;
+    background-color: rgba(255, 255, 255, 0.40); /* white at 50% opacity */
+    backdrop-filter: blur(30px); /* background blur effect */
+    -webkit-backdrop-filter: blur(30px); /* for Safari support */
     border-radius: 5px;
     overflow: hidden;
   }
@@ -109,10 +130,11 @@
   }
   
   .users-table {
-    background: white;
+    background-color: rgba(255, 255, 255, 0.40); /* white at 50% opacity */
+    backdrop-filter: blur(30px); /* background blur effect */
+    -webkit-backdrop-filter: blur(30px); /* for Safari support */
     border-radius: 10px;
     padding: 1.5rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 2rem;
   }
   
@@ -173,26 +195,34 @@
   }
   
   .view-all-section {
-    background: white;
+    background-color: rgba(255, 255, 255, 0.40); /* white at 50% opacity */
+    backdrop-filter: blur(30px); /* background blur effect */
+    -webkit-backdrop-filter: blur(30px); /* for Safari support */
     border-radius: 10px;
     padding: 1.5rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     margin-bottom: 2rem;
   }
   
   .profile-card {
     padding: 1rem;
-    border: 1px solid #ecf0f1;
+    border-bottom: 1px solid #ecf0f1;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
   }
   
-  .profile-card h4 {
+  .profile-card-content h4 {
+    font-size: 17px;
+    font-weight: 600;
     margin: 0 0 0.25rem 0;
-    color: #2c3e50;
+    color: #1e1e1e;
   }
   
   .designation {
-    color: #7f8c8d;
+    color: #645792 !important;
+    font-weight: 500;
     font-size: 0.9rem;
     margin: 0 0 0.5rem 0;
   }
@@ -224,24 +254,57 @@
     margin-top: 30px;
     flex-wrap: wrap; /* ensures responsiveness on smaller screens */
   }
+  .user-table-header{
+    display: flex;
+    justify-content: space-between;
+  }
+  .user-table-btn button{
+    padding: 6px 10px;
+    background-color: #645792;
+    color: white;
+    font-family: "Montserrat";
+    border-radius: 5px;
+    border: none;
+  }
+  .user-table-heading h3{
+    font-size: 23px;
+  }
   .users-table {
     flex: 2;
-    background: #ffffff;
+    background-color: rgba(255, 255, 255, 0.40); /* white at 50% opacity */
+    backdrop-filter: blur(30px); /* background blur effect */
+    -webkit-backdrop-filter: blur(30px); /* for Safari support */
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow-x: auto;
+  }
+  .table-user{
+    background-color: white;
+    padding: 15px 20px;
   }
   .users-table table {
     width: 100%;
     border-collapse: collapse;
   }
+  .profile-image{
+    width: 100px;
+    height: 100px;
+  }
+  .profile-image img{
+    width: 100%;
+    border-radius: 50%;
+  }
   .view-all-section {
     flex: 1;
-    background: #ffffff;
+    background-color: rgba(255, 255, 255, 0.40); /* white at 50% opacity */
+    backdrop-filter: blur(30px); /* background blur effect */
+    -webkit-backdrop-filter: blur(30px); /* for Safari support */
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .profile-desc{
+    padding: 30px 40px 40px 0px;
+    text-align: center;
   }
   .profile-card .designation,
 .profile-card .email {
@@ -251,8 +314,20 @@
 }
 
 .profile-card .bio {
-  font-size: 13px;
+  font-size: 18px;
+  text-align: center;
   color: #374151;
   margin-top: 10px;
   line-height: 1.4;
+}
+.profile-desc-btn{
+  padding: 10px 20px ;
+  background-color: #645792;
+  color: white;
+  border-radius: 10px;
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  margin-top: 30px;
 }

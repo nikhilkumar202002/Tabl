@@ -1,6 +1,6 @@
 .user-profile {
     position: relative;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Montserrat";
     /* padding: 10px 20px; */
   }
   
@@ -8,11 +8,11 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 8px 12px;
+    padding: 8px 12px !important;
     cursor: pointer;
     border-radius: 6px;
     transition: background-color 0.2s;
-    background-color: white;
+    background-color: white !important;
   }
   
   .profile-header:hover {
