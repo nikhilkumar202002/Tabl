@@ -1,0 +1,80 @@
+body {
+  font-family: "Montserrat";
+  background-image: url('/public/gradient-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0;
+  color: #333; /* Ensure text is readable on your image */
+}
+
+/* Add overlay if needed for better readability */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(120px);
+  -webkit-backdrop-filter: blur(120px);
+}
+
+.app-sidebar {
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(120px);
+  -webkit-backdrop-filter: blur(120px);
+  color: white;
+  padding: 0px 15px;
+}
+
+/* Dashboard will auto-expand based on remaining space */
+.app-main {
+  flex: 1;
+  /* width: 100%; */
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Sidebar width when open */
+.sidebar-open .app-sidebar {
+  width: 250px;
+}
+
+/* Sidebar width when closed */
+.sidebar-closed .app-sidebar {
+  width: 60px;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .app-sidebar {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .app-dashboard {
+    padding: 10px;
+  }
+}

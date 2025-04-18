@@ -1,0 +1,126 @@
+.sidebar {
+    backdrop-filter: blur(120px);
+    -webkit-backdrop-filter: blur(120px);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease;
+    overflow-x: hidden;
+    z-index: 1000;
+    /* padding: 0 10px; */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar.open {
+    width: 250px;
+  }
+  
+  .sidebar.closed {
+    width: 80px;
+    padding: 0px 10px;
+  }
+  
+  .sidebar.mobile {
+    width: 0;
+  }
+  
+  .sidebar.mobile.open {
+    width: 250px;
+  }
+  
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 10px ;
+    border-bottom: 1px solid rgba(177, 177, 177, 0.6);
+    position: relative;
+  }
+  
+  .sidebar-logo {
+    height: 50px; /* Adjust as needed */
+    transition: all 0.3s ease;
+  }  
+  
+ .sidebar-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 30px 0px;
+  margin: 0;
+  flex: 1;
+}
+  .toggle-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: 0.5px solid #E0E0E0;
+    color: #645792;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 6px;
+    
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 30px 0px;
+    margin: 0;
+  }
+  
+  .menu-item a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #1e1e1e;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+    border-radius: 5px;
+  }
+  
+  .menu-item a:hover {
+    background-color: rgba(221, 203, 255, 0.31);
+    color: #645792;
+  }
+
+  /* Active state styles */
+.menu-item a.active {
+    background-color: rgba(100, 87, 146, 0.2); /* Lighter purple background */
+    color: #645792; /* Purple text */
+    font-weight: 500;
+  }
+  
+  .icon {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    min-width: 24px;
+  }
+  
+  .name {
+    white-space: nowrap;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar:not(.open) {
+      width: 0;
+    }
+    
+    .sidebar.open {
+      width: 250px;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .sidebar-toggle-container {
+        position: static;
+        margin-top: auto;
+      }
+  }
